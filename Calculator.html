@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+         Beer Calculator !!!
+        </title>
+        <style>
+            .button {
+              color: #181818;
+              padding: 15px 32px;
+              text-align: center;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+            }
+
+            .button1 {background-color: #34a5e6 ;}
+        </style>
+        <script>
+            function updateTextBox() {
+            var amount = document.getElementById("amount");
+            var ABV = document.getElementById("ABV");
+            var type = document.getElementById("type1").value;
+
+            if(type == "Vodka")
+            {
+                ABV.value = 40;
+            }
+            else if(type == "Whiskey")
+            {
+                ABV.value = 40;
+            }
+            else if(type == "Rum")
+            {
+                ABV.value = 40;
+            }
+            else if(type == "Tequila")
+            {
+                ABV.value = 50;
+            }
+            else if(type == "Wine")
+            {
+                ABV.value = 12;
+            }
+            else if(type == "Gin")
+            {
+                ABV.value = 45;
+            }
+            else
+            {
+                ABV.value = 0;
+            }
+
+            return ABV.value;
+		    }
+
+            function updateAmount() {
+            var amount = document.getElementById("amount");
+            var size = document.getElementById("size").value;
+            var Q = document.getElementById("type2");
+
+            if(size == "M")
+            {
+                amount.value = 50;
+                Q.value = "ml";
+            }
+            else if(size == "QP")
+            {
+                amount.value = 100;
+                Q.value = "ml";
+            }
+            else if(size == "HP")
+            {
+                amount.value = 200;
+                Q.value = "ml";
+            }
+            else if(size == "P")
+            {
+                amount.value = 375;
+                Q.value = "ml";
+            }
+            else if(size == "SB")
+            {
+                amount.value = 750;
+                Q.value = "ml";
+            }
+            else if(size == "L")
+            {
+                amount.value = 1000;
+                Q.value = "ml";
+            }
+            else if(size == "HG")
+            {
+                amount.value = 1750;
+                Q.value = "ml";
+            }
+            else if(size == "Mn")
+            {
+                amount.value = 1500;
+                Q.value = "ml";
+            }
+            else if(size == "DM")
+            {
+                amount.value = 3000;
+                Q.value = "ml";
+            }
+            else if(size == "R")
+            {
+                amount.value = 4500;
+                Q.value = "ml";
+            }
+            else
+            {
+                amount.value = null;
+            }
+
+            return amount.value , Q.value;
+           
+		    }
+
+            function updateSize() {
+            var amount = document.getElementById("amount").value;
+            var size = document.getElementById("size");
+            var Q = document.getElementById("type2").value;
+
+            if((amount == "50" && Q == "ml") || (amount == "1.7" && Q == "oz"))
+            {
+                size.value = "M";
+            }
+            else if((amount == "100" && Q == "ml") || (amount == "3.4" && Q == "oz"))
+            {
+                size.value = "QP";
+            }
+            else if((amount == "200" && Q == "ml") || (amount == "6.8" && Q == "oz"))
+            {
+                size.value = "HP";
+            }
+            else if((amount == "375" && Q == "ml") || (amount == "12.7" && Q == "oz"))
+            {
+                size.value = "P";
+            }
+            else if((amount == "750" && Q == "ml") || (amount == "25.4" && Q == "oz"))
+            {
+                size.value = "SB";
+            }
+            else if((amount == "1000" && Q == "ml") || (amount == "33.8" && Q == "oz"))
+            {
+                size.value = "L";
+            }
+            else if((amount == "1500" && Q == "ml") || (amount == "50.7" && Q == "oz"))
+            {
+                size.value = "M";
+            }
+            else if((amount == "1750" && Q == "ml") || (amount == "59.2" && Q == "oz"))
+            {
+                size.value = "HG";
+            }
+            else if((amount == "3000" && Q == "ml") || (amount == "101.4" && Q == "oz"))
+            {
+                size.value = "DM";
+            }
+            else if((amount == "4500" && Q == "ml") || (amount == "152.2" && Q == "oz"))
+            {
+                size.value = "R";
+            }
+            else
+            {
+                size.value = "Select";
+            }
+
+            return size.value ;
+		    }
+            
+            function si1() {
+            var B = parseInt(document.getElementById("amount").value);
+            var F = document.getElementById("type1").value;
+            var Q = document.getElementById("type2").value;
+            var ABV = document.getElementById("ABV").value;
+        
+            if(F == "Vodka")
+                {
+                    if(Q == "oz")
+                    {
+                        B = (B * 29.57) ;
+                    }
+                    A_amount = (ABV/100) * (B/1000);
+                    N_Beer = Math.round(A_amount/0.01775);
+                    result = 'Total no. of equivalent beer bottle (5% ABV) \n ' + '= \n' + N_Beer ;
+                }
+            else if(F == "Rum")
+                {
+                    if(Q == "oz")
+                    {
+                        B = (B * 29.57) ;
+                    }
+                    A_amount = (ABV/100) * (B/1000);
+                    N_Beer = Math.round(A_amount/0.01775);
+                    result = 'Total no. of equivalent beer bottle (5% ABV) \n ' + '= \n' + N_Beer ;
+                }
+            else if(F == "Whiskey")
+                {
+                    if(Q == "oz")
+                    {
+                        B = (B * 29.57) ;
+                    }
+                    A_amount = (ABV/100) * (B/1000);
+                    N_Beer = Math.round(A_amount/0.01775);
+                    result = 'Total no. of equivalent beer bottle (5% ABV) \n ' + '= \n' + N_Beer ;
+                }
+                else if(F == "Tequila")
+                {
+                    if(Q == "oz")
+                    {
+                        B = (B * 29.57) ;
+                    }
+                    A_amount = (ABV/100) * (B/1000);
+                    N_Beer = Math.round(A_amount/0.01775);
+                    result = 'Total no. of equivalent beer bottle (5% ABV) \n ' + '= \n' + N_Beer ;
+                }
+                else if(F == "Wine")
+                {
+                    if(Q == "oz")
+                    {
+                        B = (B * 29.57) ;
+                    }
+                    A_amount = (ABV/100) * (B/1000);
+                    N_Beer = Math.round(A_amount/0.01775);
+                    result = 'Total no. of equivalent beer bottle (5% ABV) \n ' + '= \n' + N_Beer ;
+                }
+    
+            else if(F == "Gin")
+                {
+                    if(Q == "oz")
+                    {
+                        B = (B * 29.57) ;
+                    }
+                    A_amount = (ABV/100) * (B/1000);
+                    N_Beer = Math.round(A_amount/0.01775);
+                    result = 'Total no. of equivalent beer bottle (5% ABV) \n ' + '= \n' + N_Beer ;           
+                }
+            else
+            {
+                result = 'Error: Select Type of Alcohol'
+            }
+        
+        
+          document.getElementById("res1").innerHTML = result;
+        
+        
+        }
+
+        </script>
+    </head>
+    <body>
+        <h1 style="font: size 10vw; color: #34a5e6">Beer Calculator</h1>
+        
+        <p>Standard Size :</p>
+        <form action="#">
+           <select name="size" id="size" oninput="updateAmount()">
+            <option value="Select">Select</option>
+            <option value="M">Miniature</option>
+            <option value="QP">Quarter Pint</option>
+            <option value="HP">Half Pint</option>
+            <option value="P">Pint</option>
+            <option value="SB">Standard Bottle</option>
+            <option value="L">Litre</option>
+            <option value="Mn">Magnum</option>
+            <option value="HG">Half Gallon</option>
+            <option value="DM">Double Magnum</option>
+            <option value="R">Rehoboam</option>
+            </select>
+      </form>
+
+        <p>Amount of Alcohol :</p>
+        <input type="text" id="amount" name="inputField"  oninput="updateSize()" />
+        <form action="#">
+            <select name="type2" id="type2" oninput="updateSize()" >
+             <option value="ml">ml</option>
+             <option value="oz">oz</option>
+             </select>
+       </form>
+
+        <p>Types of Alcohol :</p>
+        <form action="#">
+           <select name="type1" id="type1" oninput="updateTextBox()">
+            <option value="Select">Select</option>
+            <option value="Vodka">Vodka</option>
+            <option value="Whiskey">Whiskey</option>
+            <option value="Tequila">Tequila</option>
+            <option value="Wine">Wine</option>
+            <option value="Rum">Rum</option>
+            <option value="Gin">Gin</option>
+            </select>
+      </form>
+
+      <p>Standard ABV :</p>
+      <input type="text" id="ABV" name="inputField" />
+
+      <br>
+
+        <button class="button button1" onclick = "si1()">Submit</button>
+
+        <div id="res1"></div>
+
+        
